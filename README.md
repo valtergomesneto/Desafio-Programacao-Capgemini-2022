@@ -9,9 +9,9 @@ Repositório criado para fim de avaliação do desafio de programação proposto
 - Fazer o clone/download do projeto na maquina local;
 - Abrir o projeto na sua IDE de preferência.
 
-# Foram feitos 3 exericios em diferentes graus de dificuldade, abaixo explicação de cada um deles.
+# Foram feitos 3 exercicios em diferentes graus de dificuldade em java, abaixo explicação de cada um deles.
 
-# Exericio 1
+# Exercicio 1
 - Neste exercicio o usuário fara uma entrada com um número inteiro a onde o algoritmo terá que gerar um sequencia de caracter "*" correspondente ao número inteiro dado como entrada. Tera que ser organizado a direita.
 
 # Exercicio 2
@@ -27,6 +27,6 @@ Caso a senha não esteja forte sera mostrado a mensagem com a quantidade de cara
 
 # Exercicio 3
 
-- Consiste em um exercicio a onde sera verificado um anagrama. Dado uma palavra como entrada o algoritmo irá verificar quantos pares de substrings serão anagramas.
+- Consiste em um algoritmo a onde sera verificado um anagrama. Dado uma palavra como entrada o algoritmo irá verificar quantos pares de substrings serão anagramas.
 
 
