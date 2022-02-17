@@ -9,6 +9,11 @@ Repositório criado para fim de avaliação do desafio de programação proposto
 - Fazer o clone/download do projeto na maquina local;
 - Abrir o projeto na sua IDE de preferência.
 
+# Tecnologias usadas:
+
+- JAVA
+- JUnit
+- Regex (Expressões Regulares)
 
 # Foram feitos 3 exercicios em diferentes graus de dificuldade em java, abaixo explicação de cada um deles.
 
@@ -31,6 +36,6 @@ Caso a senha não esteja forte sera mostrado a mensagem com a quantidade de cara
 # Exercicio 3
 
 - Consiste em um algoritmo a onde sera verificado um anagrama. Dado uma palavra como entrada o algoritmo irá verificar quantos pares de substrings serão anagramas.
-- Foi utlizado as bibliotecas java.util.Arrays para criação de arrays, java.util.HashMap para criação dos hash maps, java.util.Scanner para scanear a entrada de dados do usuario e fazer a verificação dos anagramas.
+- Foi utlizado as bibliotecas java.util.ArraysList e java.util.Arrays para criação de arrays, java.util.Scanner para scanear a entrada de dados do usuario e fazer a verificação dos anagramas.
 
 
