@@ -18,7 +18,7 @@ Repositório criado para fim de avaliação do desafio de programação proposto
 # Foram feitos 3 exercicios em diferentes graus de dificuldade em java, abaixo explicação de cada um deles.
 
 # Exercicio 1
-- Neste exercicio o usuário fara uma entrada com um número inteiro a onde o algoritmo terá que gerar um sequencia de caracter "*" correspondente ao número inteiro dado como entrada. Tera que ser organizado a direita.
+- Neste exercicio o usuário fara uma entrada com um número inteiro a onde o algoritmo terá que gerar um sequencia de caracter "*" correspondente ao número inteiro dado como entrada. Tera que ser organizado a direita e sem espaços a ultima linha..
 - Foi utilizado a biblioteca java.util.Scanner para scanear a entrada de dados do usuario a uma variavel.
 
 # Exercicio 2
