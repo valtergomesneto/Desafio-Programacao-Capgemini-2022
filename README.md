@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/17465605/154679993-af4ee1e9-455c-4822-bf40-e9781ed4f16c.PNG" />
+<img src="https://user-images.githubusercontent.com/37522698/154759541-d24e4f61-f090-49e6-8892-907938bcf3aa.jpeg"/>
 </p>
 
 <h1 align="center">Academia Capgemini</h1>
