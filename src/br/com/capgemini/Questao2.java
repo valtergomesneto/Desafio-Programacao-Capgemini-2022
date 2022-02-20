@@ -1,89 +1,45 @@
 package br.com.capgemini;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Questao2 {
 
-	public int checkPass(String n) {
+	public int checkPass(String senha) {
 
-		Integer c = 6;
+		int c = 0;
 
-		final String requeridos = "^.*(?=.*[!@#$%^&*()-+]).*$";
-		final String permitidosDown = "^.*([a-z]+).*$";
-		final String permitidosUP = "^.*([A-Z]+).*$";
-		final String digitos = "^.*([0-9]+).*$";
+		Pattern requeridos = Pattern.compile("^.*(?=.*[!@#$%^&*()-+]).*$");
+		Pattern permitidosDown = Pattern.compile("^.*([a-z]+).*$");
+		Pattern permitidosUp = Pattern.compile("^.*([A-Z]+).*$");
+		Pattern digitos = Pattern.compile("^.*([0-9]+).*$");
 
-		if (n.length() >= 6) {
+		Matcher requeridosMatcher = requeridos.matcher(senha);
+		Matcher permitidosDownMatcher = permitidosDown.matcher(senha);
+		Matcher permitidosUpMatcher = permitidosUp.matcher(senha);
+		Matcher digitosMatcher = digitos.matcher(senha);
 
-			// array de boolean para validação dos requisitos
-			boolean[] validador = new boolean[n.length()];
-			for (int i = 0; i < n.length(); i++) {
-				validador[i] = false;
-			}
-
-			HashMap<String, Integer> mapLetras = new HashMap<>();
-
-			// preenche o map com cada caracter
-			for (int i = 0; i < n.length(); i++) {
-				String letra = n.substring(i, i + 1);
-				if (mapLetras.containsKey(letra)) {
-					mapLetras.put(letra, mapLetras.get(letra) + 1);
-				} else {
-					mapLetras.put(letra, 1);
-				}
-			}
-
-			for (String key : mapLetras.keySet()) {
-				if (key.matches(permitidosUP)) {
-					validador[mapLetras.get(key)] = true;
-				}
-				if (key.matches(permitidosDown)) {
-					validador[mapLetras.get(key)] = true;
-				}
-				if (key.matches(digitos)) {
-					validador[mapLetras.get(key)] = true;
-				}
-				if (key.matches(requeridos)) {
-					validador[mapLetras.get(key)] = true;
-				}
-
-			}
-
-			for (String key : mapLetras.keySet()) {
-				if (validador[mapLetras.get(key)] == true) {
-					c--;
-				}
-
-			}
-
-			if (n.length() >= 6) {
-				c--;
-			}
-
-			if (c <= 0) {
-
-				return 0;
-			} else {
-
-				return c;
-			}
-
-		} else {
-
-			int aux = n.length();
-
-			while (aux > 0) {
-
-				if (n.matches(permitidosUP) || n.matches(permitidosDown) || n.matches(digitos)
-						|| n.matches(requeridos)) {
-					c--;
-				}
-				aux--;
-			}
-			return c;
+		if (!requeridosMatcher.find()) {
+			c++;
 		}
-	}
 
+		if (!permitidosDownMatcher.find()) {
+			c++;
+		}
+
+		if (!permitidosUpMatcher.find()) {
+			c++;
+		}
+
+		if (!digitosMatcher.find()) {
+			c++;
+		}
+
+		if ((c + senha.length()) < 6) {
+			c = c + 6 - (c + senha.length());
+
+		}
+
+		return c;
+	}
 }
